@@ -1,9 +1,9 @@
 // -*- C++ -*-
 //
-// Package:    HCALAnalysisTools
-// Class:      HCALAnalysisTools
+// Package:    HCALHTRAnalysis
+// Class:      HCALHTRAnalysis
 // 
-/**\class HCALAnalysisTools HCALAnalysisTools.cc JSturdy/HCALAnalysisTools/src/HCALAnalysisTools.cc
+/**\class HCALHTRAnalysis HCALHTRAnalysis.cc JSturdy/HCALHTRAnalysis/src/HCALHTRAnalysis.cc
 
  Description: [Set of basic HCAL diagnostics tools]
 
@@ -30,16 +30,16 @@
 
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 
-#include "JSturdy/HCALAnalysisTools/interface/HCALAnalysisTools.h"
+#include "JSturdy/HCALHTRAnalysis/interface/HCALHTRAnalysis.h"
 
 //
 // class declaration
 //
 
-class HCALAnalysisTools : public edm::EDAnalyzer {
+class HCALHTRAnalysis : public edm::EDAnalyzer {
    public:
-      explicit HCALAnalysisTools(const edm::ParameterSet&);
-      ~HCALAnalysisTools();
+      explicit HCALHTRAnalysis(const edm::ParameterSet&);
+      ~HCALHTRAnalysis();
 
 
    private:
@@ -61,7 +61,7 @@ class HCALAnalysisTools : public edm::EDAnalyzer {
 //
 // constructors and destructor
 //
-HCALAnalysisTools::HCALAnalysisTools(const edm::ParameterSet& iConfig)
+HCALHTRAnalysis::HCALHTRAnalysis(const edm::ParameterSet& iConfig)
 
 {
    //now do what ever initialization is needed
@@ -69,7 +69,7 @@ HCALAnalysisTools::HCALAnalysisTools(const edm::ParameterSet& iConfig)
 }
 
 
-HCALAnalysisTools::~HCALAnalysisTools()
+HCALHTRAnalysis::~HCALHTRAnalysis()
 {
  
    // do anything here that needs to be done at desctruction time
@@ -84,7 +84,7 @@ HCALAnalysisTools::~HCALAnalysisTools()
 
 // ------------ method called to for each event  ------------
 void
-HCALAnalysisTools::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
+HCALHTRAnalysis::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
    using namespace edm;
 
@@ -104,14 +104,14 @@ HCALAnalysisTools::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 
 // ------------ method called once each job just before starting event loop  ------------
 void 
-HCALAnalysisTools::beginJob()
+HCALHTRAnalysis::beginJob()
 {
 }
 
 // ------------ method called once each job just after ending the event loop  ------------
 void 
-HCALAnalysisTools::endJob() {
+HCALHTRAnalysis::endJob() {
 }
 
 //define this as a plug-in
-DEFINE_FWK_MODULE(HCALAnalysisTools);
+DEFINE_FWK_MODULE(HCALHTRAnalysis);

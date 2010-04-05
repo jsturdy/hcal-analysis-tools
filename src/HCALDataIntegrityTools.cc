@@ -1,9 +1,9 @@
 // -*- C++ -*-
 //
-// Package:    HCALAnalysisTools
-// Class:      HCALAnalysisTools
+// Package:    HCALDataIntegrityTools
+// Class:      HCALDataIntegrityTools
 // 
-/**\class HCALAnalysisTools HCALAnalysisTools.cc JSturdy/HCALAnalysisTools/src/HCALAnalysisTools.cc
+/**\class HCALDataIntegrityTools HCALDataIntegrityTools.cc JSturdy/HCALDataIntegrityTools/src/HCALDataIntegrityTools.cc
 
  Description: [Set of basic HCAL diagnostics tools]
 
@@ -30,38 +30,9 @@
 
 #include "FWCore/ParameterSet/interface/ParameterSet.h"
 
-#include "JSturdy/HCALAnalysisTools/interface/HCALAnalysisTools.h"
+#include "JSturdy/HCALDataIntegrityTools/interface/HCALDataIntegrityTools.h"
 
-//
-// class declaration
-//
-
-class HCALAnalysisTools : public edm::EDAnalyzer {
-   public:
-      explicit HCALAnalysisTools(const edm::ParameterSet&);
-      ~HCALAnalysisTools();
-
-
-   private:
-      virtual void beginJob() ;
-      virtual void analyze(const edm::Event&, const edm::EventSetup&);
-      virtual void endJob() ;
-
-      // ----------member data ---------------------------
-};
-
-//
-// constants, enums and typedefs
-//
-
-//
-// static data member definitions
-//
-
-//
-// constructors and destructor
-//
-HCALAnalysisTools::HCALAnalysisTools(const edm::ParameterSet& iConfig)
+HCALDataIntegrityTools::HCALDataIntegrityTools(const edm::ParameterSet& iConfig)
 
 {
    //now do what ever initialization is needed
@@ -69,7 +40,7 @@ HCALAnalysisTools::HCALAnalysisTools(const edm::ParameterSet& iConfig)
 }
 
 
-HCALAnalysisTools::~HCALAnalysisTools()
+HCALDataIntegrityTools::~HCALDataIntegrityTools()
 {
  
    // do anything here that needs to be done at desctruction time
@@ -84,7 +55,7 @@ HCALAnalysisTools::~HCALAnalysisTools()
 
 // ------------ method called to for each event  ------------
 void
-HCALAnalysisTools::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
+HCALDataIntegrityTools::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
 {
    using namespace edm;
 
@@ -104,14 +75,14 @@ HCALAnalysisTools::analyze(const edm::Event& iEvent, const edm::EventSetup& iSet
 
 // ------------ method called once each job just before starting event loop  ------------
 void 
-HCALAnalysisTools::beginJob()
+HCALDataIntegrityTools::beginJob()
 {
 }
 
 // ------------ method called once each job just after ending the event loop  ------------
 void 
-HCALAnalysisTools::endJob() {
+HCALDataIntegrityTools::endJob() {
 }
 
 //define this as a plug-in
-DEFINE_FWK_MODULE(HCALAnalysisTools);
+DEFINE_FWK_MODULE(HCALDataIntegrityTools);
